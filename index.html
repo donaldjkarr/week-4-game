@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>week 4 game</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+
+<h1>Crystal Collector</h1>
+
+<div id="instructions">
+	<p>You will be given random number at the beginning of the game.</p>
+	<p>There are four ceystals below. By cicking on a crystal you will add a specific amount of points to your total score.</p>
+	<p>You win by matching your total score to the number picked randomly by the computer. You lose if your score goes above the computer's number.</p>
+	<p>The value of each crystal is hidden until you click on it.</p>
+	<p>Each time the game starts the crystal gets new value.</p>
+</div>
+
+<div id="computer">
+	<h2>Computer Number... <span id="number"></span></h2>
+</div>
+
+<div id="games">
+	<p>Wins:<span id="wins"></span></p>
+	<p>Losses:<span id="losses"></span></p>
+</div>
+
+<div id="crystal1" class="crystal"></div>
+<div id="crystal2" class="crystal"></div>
+<div id="crystal3" class="crystal"></div>
+<div id="crystal4" class="crystal"></div>
+
+<div id="footer">
+	<h3>Total Score:</h3>
+	<span id="totalscore"></span>
+</div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="assets/javascript/javascript.js"></script>
+
+</body>
+</html>
