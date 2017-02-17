@@ -1,0 +1,79 @@
+body {
+	width: 960px;
+	background-image: url();
+}
+
+h1 {
+	width: 40%
+	height: 80px;
+	color: red;
+
+}
+
+#instructions {
+	width: 80%;
+	height: auto;
+	padding: 10px;
+}
+
+#computer {
+	height: 150px;
+	width: 150px;
+}
+
+#games {
+	float: left;
+	height: 100px;
+	width: 100;
+}
+
+#crystal1 {
+	clear: both;
+	float: left;
+	height: 150px;
+	width: 150px;
+	padding: 20px;
+	margin: 10px;
+	background-image: url(../images/78a7ed21a124bd0a12f674095eccafe0.jpg);
+	background-size: cover;
+
+
+}
+
+#crystal2 {
+	float: left;
+	height: 150px;
+	width: 150px;
+	padding: 20px;
+	margin: 10px;
+	background-image: url(../images/bismuth-crystal-1200x880.jpg);
+	background-size: cover;
+
+}
+
+#crystal3 {
+	float: left;
+	height: 150px;
+	width: 150px;
+	padding: 20px;
+	margin: 10px;
+	background-image: url(../images/248be7f73ddea6820b344d3ac1dcc115.jpg);
+	background-size: cover;
+
+}
+
+#crystal4 {
+	float: left;
+	height: 150px;
+	width: 150px;
+	padding: 20px;
+	margin: 10px;
+	background-image: url(../images/The_Searchlight_Rhodochrosite_Crystal.jpg);
+	background-size: cover;
+
+}
+
+#footer {
+	clear: both;
+	float: left;
+}
