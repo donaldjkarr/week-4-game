@@ -1,68 +1,130 @@
 var wins = 0;
-
 var losses = 0;
-
 var counter = 0;
-
-var randCrystal = [9, 10, 11, 12];
-
-var targetNumber = 50;
-$("#number").text(targetNumber);
-
-	
-// var crystalValue = randCrystal[Math.floor(Math.random() * randCrystal.length)];
-// 	console.log(crystalValue);
-
-// function randComp(min, max) {
-//     return Math.floor(Math.random() * (120 - 19 + 1)) + 19;
-//     console.log(randComp);
-// }
+var targetScore;
+var crystal1;
+var crystal2;
+var crystal3;
+var crystal4;
 
 
-for (var i = 0; i < randCrystal.length; i++) {
+ 
 
-	var crystalOne = $("<img>");
+function startGame() {
 
-		crystalOne.attr("data-crystalValue", randCrystal[i]);
+	wins = 0;
 
-		$("#crystal1").append(crystalOne);
+	losses = 0;
 
-	var crystalTwo = $("<img>");
+	counter = 0;
 
-		crystalTwo.attr("data-crystalValue", randCrystal[i]);
 
-		$("#crystal2").append(crystalTwo);
+	targetScore = Math.floor(Math.random() * (102)) + 19;
+	console.log(targetScore);
+	$("#number").html(targetScore);
 
-	var crystalThree = $("<img>");
+	crystal1 = Math.floor(Math.random() * 12) + 1;
+	crystal2 = Math.floor(Math.random() * 12) + 1;
+	crystal3 = Math.floor(Math.random() * 12) + 1;
+	crystal4 = Math.floor(Math.random() * 12) + 1;
 
-		crystalThree.attr("data-crystalValue", randCrystal[i]);
-
-		$("#crystal3").append(crystalThree);
-
-	var crystalFour = $("<img>");
-
-		crystalFour.attr("data-crystalValue", randCrystal[i]);
-
-		$("#crystal4").append(crystalFour);
 }
 
+  function continueGame() {
 
-  $(".crystal").on("click", function() {
-    
-    var crystalValue = ($(this).attr("data-crystalvalue"));
-    crystalValue = parseInt(crystalValue);
+  	if (counter === targetScore) {
+  		wins++;
+  		$("#wins").html(wins);
+  		alert("YOU WIN!");
+  	}	else if (counter > targetScore) {
+  		losses++;
+  		$("#losses").html(losses);
+  		alert("You Lose...");
+  	}
+  }
 
-    counter += crystalValue;
+  function reset() {
+  	if (counter >= targetScore) {
+  		counter = 0;
+  			targetScore = Math.floor(Math.random() * (102)) + 19;
+			console.log(targetScore);
+			$("#number").html(targetScore);
 
-    alert("New score: " + counter);
-
-    if (counter === targetNumber) {
-      alert("You win!");
+    } if (counter === targetScore) {
+    	targetScore = 0;
+    		targetScore = Math.floor(Math.random() * (102)) + 19;
+			console.log(targetScore);
+			$("#number").html(targetScore);
     }
 
-    else if (counter >= targetNumber) {
-      alert("You lose!!");
-    }
+  }
+
+
+
+$( document ).ready(function() {
+
+	startGame();
+
+	wins = 0;
+	losses = 0;
+	counter = 0;
+
+  $("#crystal1").on("click", function() {
+  	counter += crystal1;
+  	console.log("crystal1 value:" + crystal1);
+  	$("#totalscore").html(counter);
+  	continueGame();
+  	reset();
+  		// if (counter === targetScore) {
+  		// 	alert("you win");
+  		// } else if (counter > targetScore) {
+  		// 	alert("you lose");
+  		// }
+  });
+
+  $("#crystal2").on("click", function() {
+  	counter += crystal2;
+  	console.log("crystal2 value:" + crystal2);
+  	$("#totalscore").html(counter);
+  	continueGame();
+  	reset();
+  		// if (counter === targetScore) {
+  		// 	alert("you win");
+  		// } else if (counter > targetScore) {
+  		// 	alert("you lose");
+  		// }
+  });
+
+  $("#crystal3").on("click", function() {
+  	counter += crystal3;
+  	console.log("crystal3 value:" + crystal3);
+  	$("#totalscore").html(counter);
+  	continueGame();
+  	reset();
+  		// if (counter === targetScore) {
+  		// 	alert("you win");
+  		// } else if (counter > targetScore) {
+  		// 	alert("you lose");
+  		// }
+  });
+
+  $("#crystal4").on("click", function() {
+  	counter += crystal4;
+  	console.log("crystal4 value:" + crystal4
+  		);
+  	$("#totalscore").html(counter);
+  	continueGame();
+  	reset();
+  		// if (counter === targetScore) {
+  		// 	alert("you win");
+  		// } else if (counter > targetScore) {
+  		// 	alert("you lose");
+  		// }
+
+
+
+  });
+
 
 });
 
