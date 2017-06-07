@@ -35,11 +35,14 @@ function startGame() {
   	if (counter === targetScore) {
   		wins++;
   		$("#wins").html(wins);
-  		alert("YOU WIN!");
+
+      $('#winModal').modal('show')
+
   	}	else if (counter > targetScore) {
   		losses++;
   		$("#losses").html(losses);
-  		alert("You Lose...");
+
+      $('#loseModal').modal('show')
   	}
   }
 
@@ -75,11 +78,6 @@ $( document ).ready(function() {
   	$("#totalscore").html(counter);
   	continueGame();
   	reset();
-  		// if (counter === targetScore) {
-  		// 	alert("you win");
-  		// } else if (counter > targetScore) {
-  		// 	alert("you lose");
-  		// }
   });
 
   $("#crystal2").on("click", function() {
@@ -88,11 +86,6 @@ $( document ).ready(function() {
   	$("#totalscore").html(counter);
   	continueGame();
   	reset();
-  		// if (counter === targetScore) {
-  		// 	alert("you win");
-  		// } else if (counter > targetScore) {
-  		// 	alert("you lose");
-  		// }
   });
 
   $("#crystal3").on("click", function() {
@@ -101,11 +94,6 @@ $( document ).ready(function() {
   	$("#totalscore").html(counter);
   	continueGame();
   	reset();
-  		// if (counter === targetScore) {
-  		// 	alert("you win");
-  		// } else if (counter > targetScore) {
-  		// 	alert("you lose");
-  		// }
   });
 
   $("#crystal4").on("click", function() {
@@ -115,14 +103,6 @@ $( document ).ready(function() {
   	$("#totalscore").html(counter);
   	continueGame();
   	reset();
-  		// if (counter === targetScore) {
-  		// 	alert("you win");
-  		// } else if (counter > targetScore) {
-  		// 	alert("you lose");
-  		// }
-
-
-
   });
 
 
